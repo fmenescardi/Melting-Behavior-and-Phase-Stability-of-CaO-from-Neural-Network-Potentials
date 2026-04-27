@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: "Dataset and input files for: Melting Behavior and Phase Stability of CaO from Neural Network Potentials"
+message: "If you use this dataset, please cite the associated article."
+type: dataset
+
+authors:
+  - family-names: Menescardi
+    given-names: Francesca
+    orcid: https://orcid.org/0000-0002-5916-8727
+  - family-names: de Gironcoli
+    given-names: Stefano
+
+doi: 10.5281/zenodo.19814455
+
+repository-code: https://github.com/fmenescardi/Melting-Behavior-and-Phase-Stability-of-CaO-from-Neural-Network-Potentials
+
+license: CC-BY-4.0
