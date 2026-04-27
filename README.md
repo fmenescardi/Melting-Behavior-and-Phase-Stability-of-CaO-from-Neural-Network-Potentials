@@ -1,14 +1,16 @@
 # Melting Behavior and Phase Stability of CaO from Neural Network Potentials
 
-This repository contains the datasets, potential files, and computational scripts associated with the study of Calcium Oxide (CaO) phase stability and melting behavior under extreme conditions.
+This repository contains the potential files, and computational scripts associated with the study of Calcium Oxide (CaO) phase stability and melting behavior under extreme conditions.
+
+## Data Availability
+The full dataset supporting this work is available at Zenodo: https://doi.org/10.5281/zenodo.19814455
 
 ## Project Overview
 This research utilizes a **Machine Learning Interatomic Potential (MLIP)** to investigate the melting temperature ($T_m$) of CaO. The potential was developed using the **PANNA 2.0** framework with the **LATTE** descriptor and trained on a diverse dataset of approximately 12,000 configurations.
 
 ## Repository Content
-In compliance with the transparency guidelines of *npj Computational Materials*, this repository includes:
+This repository includes:
 
-*   **Training & Validation Datasets**: ~12,000 structural configurations in JSON format, including solid (300 K - 3200 K), liquid (2000 K - 6000 K), interfacial, void-containing, and EOS structures.
 *   **Neural Network Potential**: Parameters for the multilayer perceptron (MLP) architecture used in the simulations.
 *   **Input Scripts**:
     *   **Quantum ESPRESSO (v6.8)**: Inputs for DFT/PBEsol reference data generation.
