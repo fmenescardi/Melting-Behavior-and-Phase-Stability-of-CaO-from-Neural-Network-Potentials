@@ -1,0 +1,41 @@
+# Representative LAMMPS input for CaO void-nucleated melting (10% void)
+
+atom_style      atomic 
+units           metal    
+dimension       3
+boundary        p p p
+
+# read starting configuration
+read_data       start.data
+replicate       11 11 11
+
+#void
+region          void1 sphere 26.62 26.62 26.62 10 units box side in
+delete_atoms    region void1
+
+displace_atoms  all random 0.01 0.01 0.01 377472 units box
+velocity        all create 3000 87287 mom yes dist gaussian
+
+# potential
+pair_style   latte
+pair_coeff * * /leonardo_work/Sis24_degironc/Francesca/CaO/LATTE_CaO_tutti/LATTE_CaO_0209/lammps_weights
+
+# simulation parameters
+neighbor        1.0 bin
+neigh_modify    every 1 check yes
+timestep        0.0005 # ps
+
+thermo          100
+thermo_style    custom step temp pe etotal press lx ly lz
+
+dump            1 all custom 100 void_10.dump id element x y z
+dump_modify     1 element Ca O
+
+# constant pressure @ 3000 K
+fix             1 all npt temp 3000 3000 0.050  iso 0.0 0.0 0.71
+run             10000
+
+# melting
+fix             1 all npt  temp 3000 3500 0.050  iso 0.0 0.0 0.71
+run             1000000
+write_data	final_coord.data
