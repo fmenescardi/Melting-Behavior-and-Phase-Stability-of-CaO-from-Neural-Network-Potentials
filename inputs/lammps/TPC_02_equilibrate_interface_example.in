@@ -1,0 +1,29 @@
+# equilibrate CaO solid-liquid interface
+atom_style      atomic
+units           metal    # angstrom, eV, ps, bar
+dimension       3
+boundary        p p p
+
+# read starting configuration from previous make_interface calculation
+read_restart    two_phases_npt_3.restart	
+
+# potential
+pair_style   latte
+pair_coeff * * ./lammps_weights
+
+# simulation parameters
+neighbor        1.0 bin
+neigh_modify    every 1 check yes
+timestep        0.0005 # ps
+
+thermo          10
+thermo_style    custom step temp pe etotal press lx ly lz
+
+dump            1 all custom 100 make_interfase_npt4.dump id element x y z
+dump_modify     1 element Ca O
+
+# equilibrate at 3000 K
+fix             1 all npt temp 3000 3000 0.050 z 0.0 0.0 0.70
+run 		1000000
+unfix           1
+write_restart   two_phases_npt_4.restart 
