@@ -1,6 +1,5 @@
 # Melting Behavior and Phase Stability of CaO from Neural Network Potentials
-
-This repository contains the potential files, and computational scripts associated with the study of Calcium Oxide (CaO) phase stability and melting behavior under extreme conditions.
+This repository provides representative input files and trained MLIP parameters supporting the study of CaO melting behavior under extreme conditions.
 
 ## Data Availability
 The full dataset supporting this work is available at Zenodo: https://doi.org/10.5281/zenodo.19814455
@@ -35,9 +34,11 @@ The simulations and data generation in this work were performed using the follow
   For large-scale molecular dynamics simulations.  
   Thompson et al., Comput. Phys. Commun. 271, 108171 (2022)  
   https://doi.org/10.1016/j.cpc.2021.108171
-
+  
 ## Citation
-If you use these materials, please cite the following work:
-> Menescardi, F., & de Gironcoli, S. "Melting Behavior and Phase Stability of CaO from Neural Network Potentials: a Molecular Dynamics Study" (2026).
+If you use this repository, please cite:
+
+Menescardi, F. and de Gironcoli, S. (2026).  
+*Melting Behavior and Phase Stability of CaO from Neural Network Potentials: a Molecular Dynamics Study*.
 
 --------------------------------------------------------------------------------
