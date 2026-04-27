@@ -1,0 +1,10 @@
+species=2,Ca,O
+model=MLP
+architecture=4,900,256,128,1
+activation=0
+model_file=model.pt
+cont_sp=1
+descriptor=LATTE
+cutoff=5.0
+descriptor_shape=5:100,0,1:200,1,2[1(0,),1(0,),]:200,2,2[2(0,1,),2(0,1,),]:200,3,2[3(0,1,2,),3(0,1,2,),]:200,2,3[1(0,),1(1,),2(0,1,),]
+format=1
