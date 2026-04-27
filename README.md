@@ -13,15 +13,28 @@ This repository includes:
 
 *   **Neural Network Potential**: Parameters for the multilayer perceptron (MLP) architecture used in the simulations.
 *   **Input Scripts**:
-    *   **Quantum ESPRESSO (v6.8)**: Inputs for DFT/PBEsol reference data generation.
-    *   **PANNA 2.0**: Configuration files for potential training.
+    *   **Quantum ESPRESSO (v6.8)**: Inputs for DFT/PBEsol reference data generation and AIMD simulations.
+    *   **PANNA 2.0**: Inputs for training and validation of the network and weights extraction.
     *   **LAMMPS**: Scripts for Void-Nucleated Melting (VNM) and Two-Phase Coexistence (TPC) simulations.
-*   **Trajectories**: Initial configurations for the MD simulations.
 
 ## Software Requirements
-*   **Quantum ESPRESSO**: For first-principles calculations.
-*   **PANNA 2.0**: For neural network potential generation and training.
-*   **LAMMPS**: For large-scale molecular dynamics production runs.
+The simulations and data generation in this work were performed using the following software:
+
+- **Quantum ESPRESSO (v6.8)**  
+  For first-principles (DFT) calculations.  
+  Giannozzi et al., J. Phys.: Condens. Matter 21, 395502 (2009)  
+  https://doi.org/10.1088/0953-8984/21/39/395502  
+
+- **PANNA 2.0**  
+  For neural network potential training and inference.  
+  Pellegrini et al., J. Chem. Phys. 159 (2023)  
+  https://doi.org/10.1063/5.0155182
+  https://arxiv.org/abs/2405.08137 
+
+- **LAMMPS**  
+  For large-scale molecular dynamics simulations.  
+  Thompson et al., Comput. Phys. Commun. 271, 108171 (2022)  
+  https://doi.org/10.1016/j.cpc.2021.108171
 
 ## Citation
 If you use these materials, please cite the following work:
