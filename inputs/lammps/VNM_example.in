@@ -18,7 +18,7 @@ velocity        all create 3000 87287 mom yes dist gaussian
 
 # potential
 pair_style   latte
-pair_coeff * * /leonardo_work/Sis24_degironc/Francesca/CaO/LATTE_CaO_tutti/LATTE_CaO_0209/lammps_weights
+pair_coeff * * ./lammps_weights
 
 # simulation parameters
 neighbor        1.0 bin
